@@ -23,51 +23,31 @@ from sklearn.preprocessing import MinMaxScaler, LabelEncoder
 # Conditions = what the engineer knows BEFORE designing the roll.
 # These are the INPUT to the CVAE at inference time.
 CONDITION_NUMERIC = [
-    'NoOfRolls', 'NoOfSystems',
-    'RPM', 'StripSpeed',
+    'RPM',
     'MaxTension', 'MinTension',
     'MaxWrapAngle', 'MinWrapAngle',
-    'MaxStress', 'MinStress',
-    'MaxTW', 'MinTW',
     'MaxStripTemp',
-    'MaxWidth', 'MinWidth',
-    'MaxThickness', 'MinThickness',
-    'MaxEqLoad', 'MinEqLoad',
 ]
 
-CONDITION_BOOL = [
-    'BendingSystem', 'CoolingSystem', 'FlatnessLogger',
-    'MSS', 'MST', 'TSS', 'MTG', 'DoubleFoil',
-]
+CONDITION_BOOL = []       # none available from WPF
+CONDITION_CATEGORICAL = [] # none available from WPF
 
-CONDITION_CATEGORICAL = [
-    'MillType1ID', 'MillType2ID', 'MillType3ID',
-    'System1ID', 'System2ID',
-    'ClientInterfaceID', 'HMIID',
-    'SWReleaseID', 'MSSCommID',
-    'RollPositionID',
-]
-
-# Targets = what the model GENERATES (the roll configuration).
 TARGET_NUMERIC = [
-    'TotalNoOfZones', 'NoOf52mmZones', 'NoOf26mmZones',
-    'BearingCentreDistance', 'LongJournalLength',
-    'RaSTR', 'RaStrip',
+    'TotalNoOfZones',
+    'NoOf52mmZones',
+    'NoOf26mmZones',
+    'BearingCentreDistance',
 ]
 
-TARGET_BOOL = [
-    'LongJournals', 'HighTempCon',
-]
+TARGET_BOOL = []
 
 TARGET_CATEGORICAL = [
-    'RollTypeID', 'RollDiameterID',
-    'BearingTypeID', 'BearingHouseID', 'BearingDiameterID',
-    'SealingTypeID', 'ShaftMaterialID',
-    'SignalTransUnitID', 'RollSurfaceID', 'RollRepairID',
+    'RollDiameterID',
 ]
 
-# These will be treated as text categories (not integer IDs)
-TEXT_CATEGORICAL = ['StripCooling', 'GearBox']
+TEXT_CATEGORICAL = []  # remove StripCooling, GearBox
+
+
 
 
 def preprocess(input_csv="raw_data.csv", output_csv="features.csv"):

@@ -1,0 +1,22 @@
+Column,RMSE (norm),RMSE ± std,MAE (norm),Real scale RMSE
+TotalNoOfZones,0.1217,0.1217 ± 0.0105,0.0888,9.74 (real scale)
+NoOf52mmZones,0.173,0.1730 ± 0.0082,0.1326,9.52 (real scale)
+NoOf26mmZones,0.1883,0.1883 ± 0.0136,0.1418,12.43 (real scale)
+BearingCentreDistance,0.083,0.0830 ± 0.0065,0.0524,292.11 (real scale)
+LongJournalLength,0.028,0.0280 ± 0.0151,0.0127,67.39 (real scale)
+RaSTR,0.0912,0.0912 ± 0.0133,0.0449,0.07 (real scale)
+RaStrip,0.0288,0.0288 ± 0.0193,0.0173,0.01 (real scale)
+LongJournals,0.2133,0.2133 ± 0.0181,0.1157,categorical
+HighTempCon,0.2265,0.2265 ± 0.0141,0.1251,categorical
+RollTypeID,0.4853,0.4853 ± 0.0503,0.3243,categorical
+RollDiameterID,0.4481,0.4481 ± 0.0382,0.2445,categorical
+BearingTypeID,0.4086,0.4086 ± 0.0604,0.2547,categorical
+BearingHouseID,0.4343,0.4343 ± 0.0252,0.3224,categorical
+BearingDiameterID,0.4345,0.4345 ± 0.0408,0.2611,categorical
+SealingTypeID,0.4501,0.4501 ± 0.0446,0.2571,categorical
+ShaftMaterialID,0.3772,0.3772 ± 0.0363,0.2328,categorical
+SignalTransUnitID,1.1039,1.1039 ± 0.1620,0.6596,categorical
+RollSurfaceID,0.4919,0.4919 ± 0.0562,0.2944,categorical
+RollRepairID,0.0426,0.0426 ± 0.0404,0.019,categorical
+StripCooling,0.0748,0.0748 ± 0.0379,0.034,categorical
+GearBox,0.3324,0.3324 ± 0.0467,0.1383,categorical

@@ -1,0 +1,1614 @@
+================================================================================
+COMPREHENSIVE DATABASE COMPARISON REPORT
+================================================================================
+Generated: 2026-02-18 09:50:39
+Access Database: C:\Users\SEDATAN\ABB\Digital Tools and Automation Team - General\Thesis work 2026\David Tanudin\Stressometer DB\StressFiles_Unsecure\StressDB2011 (2025-06-24)_Unsecure.accdb
+SQL Server Database: (configured connection)
+
+================================================================================
+DATA LOSS WARNINGS
+================================================================================
+
+[HIGH] missing_tables_in_sql
+  Tables: RelDump
+
+================================================================================
+TABLE COMPARISON
+================================================================================
+Access tables: AddContent, AddContentOrder, AddonOrders, AirKnives, BMSRelease, BasedOnAppRel, BearingDiameter, BearingHouse, BearingType, ClientInterface, CommInterface, CommInterfaceOrder, Control1, Control2, Control3, Control4, ControlOrder, CoolingData, CoolingSystemType, Customer, CustomerHistory, DriveSystem, DriveSystemOrder, DriveSystemType, ElectricalSupplier, FSAApplication, FSABroker, FSACommon, FSAControl, FSACooling, FSAMeasurement, FSAProtocol, FlatnessLoggerType, HMI, HMISystem, Inbox_AddContentOrder, Inbox_AirKnives, Inbox_CommInterfaceOrder, Inbox_ControlOrder, Inbox_CoolingData, Inbox_DriveSystemOrder, Inbox_MechanicalData, Inbox_Order, Inbox_RollData, Inbox_RolledMaterialOrder, Inbox_SWOptionsOrder, Inbox_SystemVersions, MSSComm, MechanicalData, MillBuilder, MillType1, MillType2, MillType3, Order, ProjectManager, RelDump, Report, RollData, RollDiameter, RollPosition, RollRepair, RollSurface, RollType, RolledMaterial, RolledMaterialOrder, SWOptions, SWOptionsOrder, SWRelease, SealingType, SelectSource, Settings, ShaftMaterial, SignalTransUnit, SoftwarePackage, System1, System2, SystemVersions, Table Table, TechnicalCoordinator
+SQL tables: AddContent, AddContentOrder, AddonOrders, AirKnives, BMSRelease, BasedOnAppRel, BearingDiameter, BearingHouse, BearingType, ClientInterface, CommInterface, CommInterfaceOrder, Control1, Control2, Control3, Control4, ControlOrder, CoolingData, CoolingSystemType, Customer, CustomerHistory, DriveSystem, DriveSystemOrder, DriveSystemType, ElectricalSupplier, FSAApplication, FSABroker, FSACommon, FSAControl, FSACooling, FSAMeasurement, FSAProtocol, FlatnessLoggerType, HMI, HMISystem, Inbox_AddContentOrder, Inbox_AirKnives, Inbox_CommInterfaceOrder, Inbox_ControlOrder, Inbox_CoolingData, Inbox_DriveSystemOrder, Inbox_MechanicalData, Inbox_Order, Inbox_RollData, Inbox_RollData_Old, Inbox_RolledMaterialOrder, Inbox_SWOptionsOrder, Inbox_SystemVersions, MSSComm, MechanicalData, MillBuilder, MillType1, MillType2, MillType3, Order, ProjectManager, Report, RollData, RollDiameter, RollPosition, RollRepair, RollSurface, RollType, RolledMaterial, RolledMaterialOrder, SWOptions, SWOptionsOrder, SWRelease, SealingType, SelectSource, Settings, ShaftMaterial, SignalTransUnit, SoftwarePackage, System1, System2, SystemVersions, Table Table, TechnicalCoordinator, TestTable
+Only in Access: RelDump
+Only in SQL: TestTable, Inbox_RollData_Old
+
+================================================================================
+SCHEMA COMPARISON
+================================================================================
+
+Table: RolledMaterialOrder
+  Type mismatches:
+    OrderID: INTEGER -> int
+    Alloy: VARCHAR -> nvarchar
+    RolledMaterialID: INTEGER -> int
+    MaterialHardness: VARCHAR -> nvarchar
+
+Table: Settings
+  Type mismatches:
+    DocumentNo: VARCHAR -> nvarchar
+    Month: VARCHAR -> nvarchar
+    Year: VARCHAR -> nvarchar
+
+Table: Inbox_Order
+  Missing in Access: SSMA_TimeStamp
+  Type mismatches:
+    OrderID: COUNTER -> int identity
+    System2ID: INTEGER -> int
+    MillType2ID: INTEGER -> int
+    SWReleaseID: INTEGER -> int
+    ClientInterfaceID: INTEGER -> int
+    Contractor: DOUBLE -> float
+    System1ID: INTEGER -> int
+    OrginalOrderNo: VARCHAR -> nvarchar
+    MillType1ID: INTEGER -> int
+    NoOfRolls: SMALLINT -> smallint
+    MillBuilderID: INTEGER -> int
+    Notes: LONGCHAR -> nvarchar
+    MillType3ID: INTEGER -> int
+    TechnicalCoordinatorID: INTEGER -> int
+    OrderYear: VARCHAR -> nvarchar
+    TimeCreated: DATETIME -> datetime2
+    HMIID: INTEGER -> int
+    MST: BIT -> bit
+    TimeLastModified: DATETIME -> datetime2
+    NoOfSystems: SMALLINT -> smallint
+    HideInRefList: BIT -> bit
+    HidePartInRefList: BIT -> bit
+    MTG: BIT -> bit
+    ProjectManagerID: INTEGER -> int
+    ElectricalSupplierID: INTEGER -> int
+    FlatnessLogger: BIT -> bit
+    BendingSystem: BIT -> bit
+    OriginalCustomerID: INTEGER -> int
+    MSS: BIT -> bit
+    OrderNo: VARCHAR -> nvarchar
+    MSSCommID: INTEGER -> int
+    MillName: VARCHAR -> nvarchar
+    BasedOnAppRelID: INTEGER -> int
+    History: VARCHAR -> nvarchar
+    OtherContractor: VARCHAR -> nvarchar
+    CoolingSystem: BIT -> bit
+    Y2K: BIT -> bit
+    DeliveryWeek: VARCHAR -> nvarchar
+    FlatnessLoggerTypeID: INTEGER -> int
+    TSS: BIT -> bit
+    ExportToLIAD: BIT -> bit
+    CustomerID: INTEGER -> int
+    DocumentID: VARCHAR -> nvarchar
+    InboxStatus: VARCHAR -> nvarchar
+
+Table: RollData
+  Type mismatches:
+    OrderID: INTEGER -> int
+    RaSTR: REAL -> decimal
+    BearingTypeID: INTEGER -> int
+    RollSerialNo: VARCHAR -> nvarchar
+    NoOf52mmZones: SMALLINT -> int
+    DimDwgNo: VARCHAR -> nvarchar
+    GearBox: VARCHAR -> nvarchar
+    NoOf26mmZones: SMALLINT -> int
+    BearingCentreDistance: INTEGER -> int
+    Notes: LONGCHAR -> nvarchar
+    LongJournalLength: SMALLINT -> int
+    RollTypeID: INTEGER -> int
+    LongJournals: BIT -> bit
+    RollRepairID: INTEGER -> int
+    RollSurfaceID: INTEGER -> int
+    BearingDiameterID: INTEGER -> int
+    SignalTransUnitID: INTEGER -> int
+    ManufacturedOnOrderNo: VARCHAR -> nvarchar
+    RollDataID: COUNTER -> int
+    RollDiameterID: INTEGER -> int
+    ShaftMaterialID: INTEGER -> int
+    SealingTypeID: INTEGER -> int
+    BearingHouseID: INTEGER -> int
+    StripCooling: VARCHAR -> nvarchar
+    TotalNoOfZones: SMALLINT -> int
+    HighTempCon: BIT -> bit
+    RaStrip: REAL -> decimal
+
+Table: SystemVersions
+  Type mismatches:
+    OrderID: INTEGER -> int
+    FSACoolingID: INTEGER -> int
+    FSAApplicationID: INTEGER -> int
+    BMSReleaseID: INTEGER -> int
+    FSACommonID: INTEGER -> int
+    FSAControlID: INTEGER -> int
+    FSAMeasurementID: INTEGER -> int
+    HMISystemID: INTEGER -> int
+    FSAProtocolID: INTEGER -> int
+    FSABrokerID: INTEGER -> int
+
+Table: BearingHouse
+  Type mismatches:
+    BearingHouse: VARCHAR -> nvarchar
+    BearingHouseID: COUNTER -> int identity
+
+Table: AddContentOrder
+  Type mismatches:
+    OrderID: INTEGER -> int
+    AddContentID: INTEGER -> int
+
+Table: Inbox_AirKnives
+  Missing in Access: SSMA_TimeStamp
+  Type mismatches:
+    OrderID: INTEGER -> int
+    StripTemperature: SMALLINT -> smallint
+    AirFlow: SMALLINT -> smallint
+    AirPressure: REAL -> real
+
+Table: Customer
+  Missing in Access: SSMA_TimeStamp
+  Type mismatches:
+    City: VARCHAR -> nvarchar
+    Notes: LONGCHAR -> nvarchar
+    Country: VARCHAR -> nvarchar
+    Adress2: VARCHAR -> nvarchar
+    CustomerName: VARCHAR -> nvarchar
+    ContactPerson: VARCHAR -> nvarchar
+    CustomerID: COUNTER -> int identity
+    Telephone: VARCHAR -> nvarchar
+    Telefax: VARCHAR -> nvarchar
+    Adress1: VARCHAR -> nvarchar
+
+Table: Inbox_CoolingData
+  Missing in Access: SSMA_TimeStamp
+  Type mismatches:
+    OrderID: INTEGER -> int
+    Notes: LONGCHAR -> nvarchar
+    CoolingSystemTypeID: INTEGER -> int
+    MaxWorkrollDiameter: SMALLINT -> smallint
+    MaxStripThickness: REAL -> real
+    ReductionLastPass: SMALLINT -> smallint
+    NumberOfZones: SMALLINT -> smallint
+    Geometry: VARCHAR -> nvarchar
+    TotalCoolingAmount: SMALLINT -> smallint
+    PressureRegulator: BIT -> bit
+    CoolingDataID: COUNTER -> int identity
+    MaxRPMOnWorkroll: SMALLINT -> smallint
+    MaxUsedMotorPower: SMALLINT -> smallint
+    MinStripThickness: REAL -> real
+
+Table: Inbox_SystemVersions
+  Type mismatches:
+    OrderID: INTEGER -> int
+    FSACoolingID: INTEGER -> int
+    FSAApplicationID: INTEGER -> int
+    BMSReleaseID: INTEGER -> int
+    FSACommonID: INTEGER -> int
+    FSAControlID: INTEGER -> int
+    FSAMeasurementID: INTEGER -> int
+    HMISystemID: INTEGER -> int
+    FSAProtocolID: INTEGER -> int
+    FSABrokerID: INTEGER -> int
+
+Table: BMSRelease
+  Type mismatches:
+    BMSRelease: VARCHAR -> nvarchar
+    BMSReleaseID: COUNTER -> int identity
+
+Table: TechnicalCoordinator
+  Type mismatches:
+    TechnicalCoordinator: VARCHAR -> nvarchar
+    TechnicalCoordinatorID: COUNTER -> int identity
+
+Table: Order
+  Missing in Access: SSMA_TimeStamp
+  Type mismatches:
+    OrderID: COUNTER -> int identity
+    System2ID: INTEGER -> int
+    MillType2ID: INTEGER -> int
+    SWReleaseID: INTEGER -> int
+    ClientInterfaceID: INTEGER -> int
+    Contractor: DOUBLE -> float
+    System1ID: INTEGER -> int
+    OrginalOrderNo: VARCHAR -> nvarchar
+    MillType1ID: INTEGER -> int
+    NoOfRolls: SMALLINT -> smallint
+    MillBuilderID: INTEGER -> int
+    Notes: LONGCHAR -> nvarchar
+    MillType3ID: INTEGER -> int
+    TechnicalCoordinatorID: INTEGER -> int
+    OrderYear: VARCHAR -> nvarchar
+    HMIID: INTEGER -> int
+    MST: BIT -> bit
+    NoOfSystems: SMALLINT -> smallint
+    HideInRefList: BIT -> bit
+    HidePartInRefList: BIT -> bit
+    MTG: BIT -> bit
+    ProjectManagerID: INTEGER -> int
+    ElectricalSupplierID: INTEGER -> int
+    FlatnessLogger: BIT -> bit
+    BendingSystem: BIT -> bit
+    OriginalCustomerID: INTEGER -> int
+    MSS: BIT -> bit
+    OrderNo: VARCHAR -> nvarchar
+    MSSCommID: INTEGER -> int
+    MillName: VARCHAR -> nvarchar
+    BasedOnAppRelID: INTEGER -> int
+    History: VARCHAR -> nvarchar
+    OtherContractor: VARCHAR -> nvarchar
+    CoolingSystem: BIT -> bit
+    Y2K: BIT -> bit
+    DeliveryWeek: VARCHAR -> nvarchar
+    FlatnessLoggerTypeID: INTEGER -> int
+    TSS: BIT -> bit
+    ExportToLIAD: BIT -> bit
+    CustomerID: INTEGER -> int
+    DocumentID: VARCHAR -> nvarchar
+
+Table: SignalTransUnit
+  Type mismatches:
+    SignalTransUnitID: COUNTER -> int identity
+    SignalTransUnit: VARCHAR -> nvarchar
+
+Table: RollType
+  Type mismatches:
+    RollTypeID: COUNTER -> int identity
+    RollType: VARCHAR -> nvarchar
+
+Table: AirKnives
+  Missing in Access: SSMA_TimeStamp
+  Type mismatches:
+    OrderID: INTEGER -> int
+    StripTemperature: SMALLINT -> smallint
+    AirFlow: SMALLINT -> smallint
+    AirPressure: REAL -> real
+
+Table: ControlOrder
+  Type mismatches:
+    OrderID: INTEGER -> int
+    Control1ID: INTEGER -> int
+    Control2ID: INTEGER -> int
+    Control3ID: INTEGER -> int
+    Control4ID: INTEGER -> int
+
+Table: ElectricalSupplier
+  Type mismatches:
+    ElectricalSupplierID: COUNTER -> int identity
+    ElectricalSupplier: VARCHAR -> nvarchar
+
+Table: FSAProtocol
+  Type mismatches:
+    FSAProtocol: VARCHAR -> nvarchar
+    FSAProtocolID: COUNTER -> int identity
+
+Table: CustomerHistory
+  Type mismatches:
+    OldCustomerID: INTEGER -> int
+    NewCustomerID: INTEGER -> int
+
+Table: Control1
+  Type mismatches:
+    Control1: VARCHAR -> nvarchar
+    Control1ID: COUNTER -> int identity
+
+Table: BearingType
+  Type mismatches:
+    BearingType: VARCHAR -> nvarchar
+    BearingTypeID: COUNTER -> int identity
+
+Table: HMISystem
+  Type mismatches:
+    HMISystemID: COUNTER -> int identity
+    HMISystem: VARCHAR -> nvarchar
+
+Table: DriveSystem
+  Type mismatches:
+    DriveSystemID: COUNTER -> int identity
+    DriveSystem: VARCHAR -> nvarchar
+
+Table: ProjectManager
+  Type mismatches:
+    ProjectManagerID: COUNTER -> int identity
+    ProjectManager: VARCHAR -> nvarchar
+
+Table: AddonOrders
+  Type mismatches:
+    OrderID: INTEGER -> int
+    AddonOrderNo: VARCHAR -> nvarchar
+    AddonTypeID: INTEGER -> int
+
+Table: RollSurface
+  Type mismatches:
+    RollSurface: VARCHAR -> nvarchar
+    RollSurfaceID: COUNTER -> int identity
+
+Table: FSAMeasurement
+  Type mismatches:
+    FSAMeasurement: VARCHAR -> nvarchar
+    FSAMeasurementID: COUNTER -> int identity
+
+Table: MillBuilder
+  Type mismatches:
+    MillBuilder: VARCHAR -> nvarchar
+    MillBuilderID: COUNTER -> int identity
+
+Table: MillType3
+  Type mismatches:
+    MillType3: VARCHAR -> nvarchar
+    MillType3ID: COUNTER -> int identity
+
+Table: BearingDiameter
+  Type mismatches:
+    BearingDiameterID: COUNTER -> int identity
+    BearingDiameter: VARCHAR -> nvarchar
+
+Table: Inbox_AddContentOrder
+  Type mismatches:
+    OrderID: INTEGER -> int
+    AddContentID: INTEGER -> int
+
+Table: Control4
+  Type mismatches:
+    Control4ID: COUNTER -> int identity
+    Control4: VARCHAR -> nvarchar
+
+Table: Table Table
+  Type mismatches:
+    TableName: VARCHAR -> nvarchar
+    TableId: COUNTER -> int identity
+
+Table: ClientInterface
+  Type mismatches:
+    ClientInterfaceID: COUNTER -> int identity
+    ClientInterface: VARCHAR -> nvarchar
+
+Table: MillType1
+  Type mismatches:
+    MillType1ID: COUNTER -> int identity
+    MillType1: VARCHAR -> nvarchar
+
+Table: SWOptions
+  Type mismatches:
+    SWOptions: VARCHAR -> nvarchar
+    SWOptionsID: COUNTER -> int identity
+
+Table: RolledMaterial
+  Type mismatches:
+    RolledMaterial: VARCHAR -> nvarchar
+    RolledMaterialID: COUNTER -> int identity
+
+Table: RollRepair
+  Type mismatches:
+    RollRepairID: COUNTER -> int identity
+    RollRepair: VARCHAR -> nvarchar
+
+Table: System2
+  Type mismatches:
+    System2ID: COUNTER -> int identity
+    System2: VARCHAR -> nvarchar
+
+Table: SWOptionsOrder
+  Type mismatches:
+    OrderID: INTEGER -> int
+    SWOptionsID: INTEGER -> int
+
+Table: DriveSystemOrder
+  Missing in Access: SSMA_TimeStamp
+  Type mismatches:
+    OrderID: INTEGER -> int
+    Notes: LONGCHAR -> nvarchar
+    SoftwarePackageID: INTEGER -> int
+    Power: REAL -> real
+    DriveSystemTypeID: INTEGER -> int
+    DriveSystemID: INTEGER -> int
+    Voltage: SMALLINT -> smallint
+
+Table: SelectSource
+  Type mismatches:
+    Table: VARCHAR -> nvarchar
+    Field: VARCHAR -> nvarchar
+    Group: VARCHAR -> nvarchar
+    Alias: VARCHAR -> nvarchar
+    Father_Join: VARCHAR -> nvarchar
+    Me_Join: VARCHAR -> nvarchar
+
+Table: FSABroker
+  Type mismatches:
+    FSABroker: VARCHAR -> nvarchar
+    FSABrokerID: COUNTER -> int identity
+
+Table: System1
+  Type mismatches:
+    System1ID: COUNTER -> int identity
+    System1: VARCHAR -> nvarchar
+
+Table: AddContent
+  Type mismatches:
+    AddContentID: COUNTER -> int identity
+    AddContent: VARCHAR -> nvarchar
+
+Table: MechanicalData
+  Missing in Access: SSMA_TimeStamp
+  Type mismatches:
+    OrderID: INTEGER -> int
+    RPM: INTEGER -> int
+    MaxThickness: REAL -> real
+    RollPositionID: INTEGER -> int
+    MaxWidth: REAL -> real
+    Notes: LONGCHAR -> nvarchar
+    MinWrapAngle: REAL -> real
+    MaxEqLoad: SMALLINT -> smallint
+    MinTW: REAL -> real
+    MaxTW: REAL -> real
+    DoubleFoil: BIT -> bit
+    StripSpeed: REAL -> real
+    MinWidth: REAL -> real
+    MaxWrapAngle: REAL -> real
+    MinTension: REAL -> real
+    MinThickness: REAL -> real
+    MaxTension: REAL -> real
+    MaxStripTemp: INTEGER -> int
+    MinEqLoad: SMALLINT -> smallint
+    MinStress: REAL -> real
+    MechanicalDataID: COUNTER -> int identity
+    MaxStress: REAL -> real
+
+Table: SoftwarePackage
+  Type mismatches:
+    SoftwarePackageID: COUNTER -> int identity
+    SoftwarePackage: VARCHAR -> nvarchar
+
+Table: RollDiameter
+  Type mismatches:
+    RollDiameter: VARCHAR -> nvarchar
+    RollDiameterID: COUNTER -> int identity
+
+Table: Inbox_DriveSystemOrder
+  Missing in Access: SSMA_TimeStamp
+  Type mismatches:
+    OrderID: INTEGER -> int
+    Notes: LONGCHAR -> nvarchar
+    SoftwarePackageID: INTEGER -> int
+    Power: REAL -> real
+    DriveSystemTypeID: INTEGER -> int
+    DriveSystemID: INTEGER -> int
+    Voltage: SMALLINT -> smallint
+
+Table: Inbox_RolledMaterialOrder
+  Type mismatches:
+    OrderID: INTEGER -> int
+    Alloy: VARCHAR -> nvarchar
+    RolledMaterialID: INTEGER -> int
+    MaterialHardness: VARCHAR -> nvarchar
+
+Table: MillType2
+  Type mismatches:
+    MillType2ID: COUNTER -> int identity
+    MillType2: VARCHAR -> nvarchar
+
+Table: RollPosition
+  Type mismatches:
+    RollPositionID: COUNTER -> int identity
+    RollPosition: VARCHAR -> nvarchar
+
+Table: CoolingData
+  Missing in Access: SSMA_TimeStamp
+  Type mismatches:
+    OrderID: INTEGER -> int
+    Notes: LONGCHAR -> nvarchar
+    CoolingSystemTypeID: INTEGER -> int
+    MaxWorkrollDiameter: SMALLINT -> smallint
+    MaxStripThickness: REAL -> real
+    ReductionLastPass: SMALLINT -> smallint
+    NumberOfZones: SMALLINT -> smallint
+    Geometry: VARCHAR -> nvarchar
+    TotalCoolingAmount: SMALLINT -> smallint
+    PressureRegulator: BIT -> bit
+    CoolingDataID: COUNTER -> int identity
+    MaxRPMOnWorkroll: SMALLINT -> smallint
+    MaxUsedMotorPower: SMALLINT -> smallint
+    MinStripThickness: REAL -> real
+
+Table: CommInterface
+  Type mismatches:
+    CommInterfaceID: COUNTER -> int identity
+    CommInterface: VARCHAR -> nvarchar
+
+Table: Inbox_SWOptionsOrder
+  Type mismatches:
+    OrderID: INTEGER -> int
+    SWOptionsID: INTEGER -> int
+
+Table: BasedOnAppRel
+  Type mismatches:
+    BasedOnAppRelID: COUNTER -> int identity
+    BasedOnAppRel: VARCHAR -> nvarchar
+
+Table: SealingType
+  Type mismatches:
+    SealingTypeID: COUNTER -> int identity
+    SealingType: VARCHAR -> nvarchar
+
+Table: Inbox_MechanicalData
+  Missing in Access: SSMA_TimeStamp
+  Type mismatches:
+    OrderID: INTEGER -> int
+    RPM: INTEGER -> int
+    MaxThickness: REAL -> real
+    RollPositionID: INTEGER -> int
+    MaxWidth: REAL -> real
+    Notes: LONGCHAR -> nvarchar
+    MinWrapAngle: REAL -> real
+    MaxEqLoad: SMALLINT -> smallint
+    MinTW: REAL -> real
+    MaxTW: REAL -> real
+    DoubleFoil: BIT -> bit
+    StripSpeed: REAL -> real
+    MinWidth: REAL -> real
+    MaxWrapAngle: REAL -> real
+    MinTension: REAL -> real
+    MinThickness: REAL -> real
+    MaxTension: REAL -> real
+    MaxStripTemp: INTEGER -> int
+    MinEqLoad: SMALLINT -> smallint
+    MinStress: REAL -> real
+    MechanicalDataID: COUNTER -> int identity
+    MaxStress: REAL -> real
+
+Table: FSACooling
+  Type mismatches:
+    FSACooling: VARCHAR -> nvarchar
+    FSACoolingID: COUNTER -> int identity
+
+Table: Inbox_RollData
+  Type mismatches:
+    OrderID: INTEGER -> int
+    RaSTR: REAL -> real
+    BearingTypeID: INTEGER -> int
+    RollSerialNo: VARCHAR -> nvarchar
+    NoOf52mmZones: SMALLINT -> int
+    DimDwgNo: VARCHAR -> nvarchar
+    GearBox: VARCHAR -> nvarchar
+    NoOf26mmZones: SMALLINT -> int
+    BearingCentreDistance: INTEGER -> int
+    Notes: LONGCHAR -> nvarchar
+    LongJournalLength: SMALLINT -> int
+    RollTypeID: INTEGER -> int
+    LongJournals: BIT -> bit
+    RollRepairID: INTEGER -> int
+    RollSurfaceID: INTEGER -> int
+    BearingDiameterID: INTEGER -> int
+    SignalTransUnitID: INTEGER -> int
+    ManufacturedOnOrderNo: VARCHAR -> nvarchar
+    RollDataID: COUNTER -> int
+    RollDiameterID: INTEGER -> int
+    ShaftMaterialID: INTEGER -> int
+    SealingTypeID: INTEGER -> int
+    BearingHouseID: INTEGER -> int
+    StripCooling: VARCHAR -> nvarchar
+    TotalNoOfZones: SMALLINT -> int
+    HighTempCon: BIT -> bit
+    RaStrip: REAL -> real
+
+Table: FSAControl
+  Type mismatches:
+    FSAControlID: COUNTER -> int identity
+    FSAControl: VARCHAR -> nvarchar
+
+Table: Control2
+  Type mismatches:
+    Control2ID: COUNTER -> int identity
+    Control2: VARCHAR -> nvarchar
+
+Table: Report
+  Type mismatches:
+    Report: VARCHAR -> nvarchar
+    ReportID: SMALLINT -> smallint
+
+Table: Inbox_CommInterfaceOrder
+  Type mismatches:
+    OrderID: INTEGER -> int
+    CommInterfaceID: INTEGER -> int
+
+Table: FSAApplication
+  Type mismatches:
+    FSAApplication: VARCHAR -> nvarchar
+    FSAApplicationID: COUNTER -> int identity
+
+Table: ShaftMaterial
+  Type mismatches:
+    ShaftMaterial: VARCHAR -> nvarchar
+    ShaftMaterialID: COUNTER -> int identity
+
+Table: SWRelease
+  Type mismatches:
+    SWReleaseID: COUNTER -> int identity
+    SWRelease: VARCHAR -> nvarchar
+
+Table: Control3
+  Type mismatches:
+    Control3ID: COUNTER -> int identity
+    Control3: VARCHAR -> nvarchar
+
+Table: MSSComm
+  Type mismatches:
+    MSSCommID: COUNTER -> int identity
+    MSSComm: VARCHAR -> nvarchar
+
+Table: DriveSystemType
+  Type mismatches:
+    DriveSystemTypeID: COUNTER -> int identity
+    DriveSystemType: VARCHAR -> nvarchar
+
+Table: FSACommon
+  Type mismatches:
+    FSACommon: VARCHAR -> nvarchar
+    FSACommonID: COUNTER -> int identity
+
+Table: FlatnessLoggerType
+  Type mismatches:
+    FlatnessLoggerTypeID: COUNTER -> int identity
+    FlatnessLoggerType: VARCHAR -> nvarchar
+
+Table: CoolingSystemType
+  Type mismatches:
+    CoolingSystemType: VARCHAR -> nvarchar
+    CoolingSystemTypeID: COUNTER -> int identity
+
+Table: CommInterfaceOrder
+  Type mismatches:
+    OrderID: INTEGER -> int
+    CommInterfaceID: INTEGER -> int
+
+Table: HMI
+  Type mismatches:
+    HMI: VARCHAR -> nvarchar
+    HMIID: COUNTER -> int identity
+
+Table: Inbox_ControlOrder
+  Type mismatches:
+    OrderID: INTEGER -> int
+    Control1ID: INTEGER -> int
+    Control2ID: INTEGER -> int
+    Control3ID: INTEGER -> int
+    Control4ID: INTEGER -> int
+
+================================================================================
+DATA COMPARISON
+================================================================================
+
+Table: RolledMaterialOrder
+  Access rows: 2,284
+  SQL rows: 2,284
+  Difference: 0
+
+Table: Settings
+  Access rows: 1
+  SQL rows: 1
+  Difference: 0
+
+Table: Inbox_Order
+  Access rows: 411
+  SQL rows: 411
+  Difference: 0
+
+Table: RollData
+  Access rows: 2,692
+  SQL rows: 2,692
+  Difference: 0
+
+Table: SystemVersions
+  Access rows: 334
+  SQL rows: 334
+  Difference: 0
+
+Table: BearingHouse
+  Access rows: 6
+  SQL rows: 6
+  Difference: 0
+
+Table: AddContentOrder
+  Access rows: 1,138
+  SQL rows: 1,138
+  Difference: 0
+
+Table: Inbox_AirKnives
+  Access rows: 2
+  SQL rows: 2
+  Difference: 0
+
+Table: Customer
+  Access rows: 748
+  SQL rows: 748
+  Difference: 0
+
+Table: Inbox_CoolingData
+  Access rows: 11
+  SQL rows: 11
+  Difference: 0
+
+Table: Inbox_SystemVersions
+  Access rows: 2
+  SQL rows: 2
+  Difference: 0
+
+Table: BMSRelease
+  Access rows: 9
+  SQL rows: 9
+  Difference: 0
+
+Table: TechnicalCoordinator
+  Access rows: 38
+  SQL rows: 38
+  Difference: 0
+
+Table: Order
+  Access rows: 2,099
+  SQL rows: 2,099
+  Difference: 0
+
+Table: SignalTransUnit
+  Access rows: 33
+  SQL rows: 33
+  Difference: 0
+
+Table: RollType
+  Access rows: 6
+  SQL rows: 6
+  Difference: 0
+
+Table: AirKnives
+  Access rows: 27
+  SQL rows: 27
+  Difference: 0
+
+Table: ControlOrder
+  Access rows: 2,180
+  SQL rows: 2,180
+  Difference: 0
+
+Table: ElectricalSupplier
+  Access rows: 100
+  SQL rows: 100
+  Difference: 0
+
+Table: FSAProtocol
+  Access rows: 20
+  SQL rows: 20
+  Difference: 0
+
+Table: CustomerHistory
+  Access rows: 88
+  SQL rows: 88
+  Difference: 0
+
+Table: Control1
+  Access rows: 8
+  SQL rows: 8
+  Difference: 0
+
+Table: BearingType
+  Access rows: 10
+  SQL rows: 10
+  Difference: 0
+
+Table: HMISystem
+  Access rows: 24
+  SQL rows: 24
+  Difference: 0
+
+Table: DriveSystem
+  Access rows: 6
+  SQL rows: 6
+  Difference: 0
+
+Table: ProjectManager
+  Access rows: 24
+  SQL rows: 24
+  Difference: 0
+
+Table: AddonOrders
+  Access rows: 862
+  SQL rows: 862
+  Difference: 0
+
+Table: RollSurface
+  Access rows: 11
+  SQL rows: 11
+  Difference: 0
+
+Table: FSAMeasurement
+  Access rows: 45
+  SQL rows: 45
+  Difference: 0
+
+Table: MillBuilder
+  Access rows: 123
+  SQL rows: 123
+  Difference: 0
+
+Table: MillType3
+  Access rows: 3
+  SQL rows: 3
+  Difference: 0
+
+Table: BearingDiameter
+  Access rows: 6
+  SQL rows: 6
+  Difference: 0
+
+Table: Inbox_AddContentOrder
+  Access rows: 26
+  SQL rows: 26
+  Difference: 0
+
+Table: Control4
+  Access rows: 3
+  SQL rows: 3
+  Difference: 0
+
+Table: Table Table
+  Access rows: 47
+  SQL rows: 47
+  Difference: 0
+
+Table: ClientInterface
+  Access rows: 12
+  SQL rows: 12
+  Difference: 0
+
+Table: MillType1
+  Access rows: 14
+  SQL rows: 14
+  Difference: 0
+
+Table: SWOptions
+  Access rows: 4
+  SQL rows: 4
+  Difference: 0
+
+Table: RolledMaterial
+  Access rows: 19
+  SQL rows: 19
+  Difference: 0
+
+Table: RollRepair
+  Access rows: 3
+  SQL rows: 3
+  Difference: 0
+
+Table: System2
+  Access rows: 6
+  SQL rows: 6
+  Difference: 0
+
+Table: SWOptionsOrder
+  Access rows: 44
+  SQL rows: 44
+  Difference: 0
+
+Table: DriveSystemOrder
+  Access rows: 329
+  SQL rows: 329
+  Difference: 0
+
+Table: SelectSource
+  Access rows: 116
+  SQL rows: 116
+  Difference: 0
+
+Table: FSABroker
+  Access rows: 19
+  SQL rows: 19
+  Difference: 0
+
+Table: System1
+  Access rows: 40
+  SQL rows: 40
+  Difference: 0
+
+Table: AddContent
+  Access rows: 48
+  SQL rows: 48
+  Difference: 0
+
+Table: MechanicalData
+  Access rows: 2,221
+  SQL rows: 2,221
+  Difference: 0
+
+Table: SoftwarePackage
+  Access rows: 9
+  SQL rows: 9
+  Difference: 0
+
+Table: RollDiameter
+  Access rows: 5
+  SQL rows: 5
+  Difference: 0
+
+Table: Inbox_DriveSystemOrder
+  Access rows: 24
+  SQL rows: 24
+  Difference: 0
+
+Table: Inbox_RolledMaterialOrder
+  Access rows: 439
+  SQL rows: 439
+  Difference: 0
+
+Table: MillType2
+  Access rows: 20
+  SQL rows: 20
+  Difference: 0
+
+Table: RollPosition
+  Access rows: 10
+  SQL rows: 10
+  Difference: 0
+
+Table: CoolingData
+  Access rows: 81
+  SQL rows: 81
+  Difference: 0
+
+Table: CommInterface
+  Access rows: 35
+  SQL rows: 35
+  Difference: 0
+
+Table: Inbox_SWOptionsOrder
+  Access rows: 0
+  SQL rows: 0
+  Difference: 0
+
+Table: BasedOnAppRel
+  Access rows: 8
+  SQL rows: 8
+  Difference: 0
+
+Table: SealingType
+  Access rows: 4
+  SQL rows: 4
+  Difference: 0
+
+Table: Inbox_MechanicalData
+  Access rows: 410
+  SQL rows: 410
+  Difference: 0
+
+Table: FSACooling
+  Access rows: 34
+  SQL rows: 34
+  Difference: 0
+
+Table: Inbox_RollData
+  Access rows: 468
+  SQL rows: 468
+  Difference: 0
+
+Table: FSAControl
+  Access rows: 42
+  SQL rows: 42
+  Difference: 0
+
+Table: Control2
+  Access rows: 26
+  SQL rows: 26
+  Difference: 0
+
+Table: Report
+  Access rows: 7
+  SQL rows: 7
+  Difference: 0
+
+Table: Inbox_CommInterfaceOrder
+  Access rows: 225
+  SQL rows: 225
+  Difference: 0
+
+Table: FSAApplication
+  Access rows: 6
+  SQL rows: 6
+  Difference: 0
+
+Table: ShaftMaterial
+  Access rows: 3
+  SQL rows: 3
+  Difference: 0
+
+Table: SWRelease
+  Access rows: 21
+  SQL rows: 21
+  Difference: 0
+
+Table: Control3
+  Access rows: 3
+  SQL rows: 3
+  Difference: 0
+
+Table: MSSComm
+  Access rows: 4
+  SQL rows: 4
+  Difference: 0
+
+Table: DriveSystemType
+  Access rows: 13
+  SQL rows: 13
+  Difference: 0
+
+Table: FSACommon
+  Access rows: 25
+  SQL rows: 25
+  Difference: 0
+
+Table: FlatnessLoggerType
+  Access rows: 1
+  SQL rows: 1
+  Difference: 0
+
+Table: CoolingSystemType
+  Access rows: 2
+  SQL rows: 2
+  Difference: 0
+
+Table: CommInterfaceOrder
+  Access rows: 1,362
+  SQL rows: 1,362
+  Difference: 0
+
+Table: HMI
+  Access rows: 4
+  SQL rows: 4
+  Difference: 0
+
+Table: Inbox_ControlOrder
+  Access rows: 236
+  SQL rows: 236
+  Difference: 0
+
+================================================================================
+RELATIONSHIP COMPARISON
+================================================================================
+
+Access relationships (70):
+  CoolingData.CoolingSystemTypeID -> CoolingSystemType.CoolingSystemTypeID
+  SWOptionsOrder.OrderID -> Order.OrderID
+  CommInterfaceOrder.OrderID -> Order.OrderID
+  Inbox_SWOptionsOrder.OrderID -> Inbox_Order.OrderID
+  SystemVersions.FSAProtocolID -> FSAProtocol.FSAProtocolID
+  Order.System1ID -> System1.System1ID
+  Inbox_RolledMaterialOrder.OrderID -> Inbox_Order.OrderID
+  AddonOrders.OrderID -> Order.OrderID
+  SWOptionsOrder.SWOptionsID -> SWOptions.SWOptionsID
+  CustomerHistory.OldCustomerID -> Customer.CustomerID
+  AddContentOrder.AddContentID -> AddContent.AddContentID
+  ControlOrder.Control3ID -> Control3.Control3ID
+  Order.FlatnessLoggerTypeID -> FlatnessLoggerType.FlatnessLoggerTypeID
+  DriveSystemOrder.SoftwarePackageID -> SoftwarePackage.SoftwarePackageID
+  ControlOrder.Control4ID -> Control4.Control4ID
+  Order.MSSCommID -> MSSComm.MSSCommID
+  Inbox_AirKnives.OrderID -> Inbox_Order.OrderID
+  RollData.RollSurfaceID -> RollSurface.RollSurfaceID
+  ControlOrder.Control1ID -> Control1.Control1ID
+  MechanicalData.RollPositionID -> RollPosition.RollPositionID
+  RollData.BearingHouseID -> BearingHouse.BearingHouseID
+  AddContentOrder.OrderID -> Order.OrderID
+  Order.System2ID -> System2.System2ID
+  Inbox_AddContentOrder.OrderID -> Inbox_Order.OrderID
+  SystemVersions.FSAApplicationID -> FSAApplication.FSAApplicationID
+  RollData.BearingDiameterID -> BearingDiameter.BearingDiameterID
+  Inbox_MechanicalData.OrderID -> Inbox_Order.OrderID
+  Order.CustomerID -> Customer.CustomerID
+  SystemVersions.FSACoolingID -> FSACooling.FSACoolingID
+  Order.MillBuilderID -> MillBuilder.MillBuilderID
+  RollData.SealingTypeID -> SealingType.SealingTypeID
+  MSysNavPaneGroups.GroupCategoryID -> MSysNavPaneGroupCategories.Id
+  MSysNavPaneGroupToObjects.GroupID -> MSysNavPaneGroups.Id
+  Inbox_ControlOrder.OrderID -> Inbox_Order.OrderID
+  CoolingData.OrderID -> Order.OrderID
+  DriveSystemOrder.DriveSystemID -> DriveSystem.DriveSystemID
+  Order.MillType3ID -> MillType3.MillType3ID
+  RollData.ShaftMaterialID -> ShaftMaterial.ShaftMaterialID
+  ControlOrder.OrderID -> Order.OrderID
+  SystemVersions.HMISystemID -> HMISystem.HMISystemID
+  Inbox_RollData.OrderID -> Inbox_Order.OrderID
+  Inbox_DriveSystemOrder.OrderID -> Inbox_Order.OrderID
+  RollData.OrderID -> Order.OrderID
+  Inbox_SystemVersions.OrderID -> Inbox_Order.OrderID
+  Order.ElectricalSupplierID -> ElectricalSupplier.ElectricalSupplierID
+  RollData.SignalTransUnitID -> SignalTransUnit.SignalTransUnitID
+  SystemVersions.BMSReleaseID -> BMSRelease.BMSReleaseID
+  Order.MillType2ID -> MillType2.MillType2ID
+  Order.MillType1ID -> MillType1.MillType1ID
+  Order.BasedOnAppRelID -> BasedOnAppRel.BasedOnAppRelID
+  ControlOrder.Control2ID -> Control2.Control2ID
+  DriveSystemOrder.DriveSystemTypeID -> DriveSystemType.DriveSystemTypeID
+  Order.SWReleaseID -> SWRelease.SWReleaseID
+  RolledMaterialOrder.OrderID -> Order.OrderID
+  RollData.RollTypeID -> RollType.RollTypeID
+  SystemVersions.FSAControlID -> FSAControl.FSAControlID
+  SystemVersions.FSABrokerID -> FSABroker.FSABrokerID
+  RollData.BearingTypeID -> BearingType.BearingTypeID
+  Inbox_CommInterfaceOrder.OrderID -> Inbox_Order.OrderID
+  SystemVersions.FSAMeasurementID -> FSAMeasurement.FSAMeasurementID
+  AirKnives.OrderID -> Order.OrderID
+  Order.HMIID -> HMI.HMIID
+  MechanicalData.OrderID -> Order.OrderID
+  CommInterfaceOrder.CommInterfaceID -> CommInterface.CommInterfaceID
+  Order.ClientInterfaceID -> ClientInterface.ClientInterfaceID
+  RollData.RollDiameterID -> RollDiameter.RollDiameterID
+  Inbox_CoolingData.OrderID -> Inbox_Order.OrderID
+  SystemVersions.FSACommonID -> FSACommon.FSACommonID
+  RollData.RollRepairID -> RollRepair.RollRepairID
+  RolledMaterialOrder.RolledMaterialID -> RolledMaterial.RolledMaterialID
+
+SQL relationships (68):
+  AddContentOrder.AddContentID -> AddContent.AddContentID
+  AddContentOrder.OrderID -> Order.OrderID
+  AddonOrders.OrderID -> Order.OrderID
+  AirKnives.OrderID -> Order.OrderID
+  CommInterfaceOrder.OrderID -> Order.OrderID
+  CommInterfaceOrder.CommInterfaceID -> CommInterface.CommInterfaceID
+  ControlOrder.Control3ID -> Control3.Control3ID
+  ControlOrder.OrderID -> Order.OrderID
+  ControlOrder.Control1ID -> Control1.Control1ID
+  ControlOrder.Control4ID -> Control4.Control4ID
+  ControlOrder.Control2ID -> Control2.Control2ID
+  CoolingData.OrderID -> Order.OrderID
+  CoolingData.CoolingSystemTypeID -> CoolingSystemType.CoolingSystemTypeID
+  CustomerHistory.OldCustomerID -> Customer.CustomerID
+  DriveSystemOrder.SoftwarePackageID -> SoftwarePackage.SoftwarePackageID
+  DriveSystemOrder.DriveSystemID -> DriveSystem.DriveSystemID
+  DriveSystemOrder.DriveSystemTypeID -> DriveSystemType.DriveSystemTypeID
+  Inbox_AddContentOrder.OrderID -> Inbox_Order.OrderID
+  Inbox_AirKnives.OrderID -> Inbox_Order.OrderID
+  Inbox_CommInterfaceOrder.OrderID -> Inbox_Order.OrderID
+  Inbox_ControlOrder.OrderID -> Inbox_Order.OrderID
+  Inbox_CoolingData.OrderID -> Inbox_Order.OrderID
+  Inbox_DriveSystemOrder.OrderID -> Inbox_Order.OrderID
+  Inbox_MechanicalData.OrderID -> Inbox_Order.OrderID
+  Inbox_RollData_Old.OrderID -> Inbox_Order.OrderID
+  Inbox_RolledMaterialOrder.OrderID -> Inbox_Order.OrderID
+  Inbox_SWOptionsOrder.OrderID -> Inbox_Order.OrderID
+  Inbox_SystemVersions.OrderID -> Inbox_Order.OrderID
+  MechanicalData.OrderID -> Order.OrderID
+  MechanicalData.RollPositionID -> RollPosition.RollPositionID
+  Order.HMIID -> HMI.HMIID
+  Order.System2ID -> System2.System2ID
+  Order.MillType3ID -> MillType3.MillType3ID
+  Order.BasedOnAppRelID -> BasedOnAppRel.BasedOnAppRelID
+  Order.CustomerID -> Customer.CustomerID
+  Order.MillType1ID -> MillType1.MillType1ID
+  Order.MSSCommID -> MSSComm.MSSCommID
+  Order.System1ID -> System1.System1ID
+  Order.SWReleaseID -> SWRelease.SWReleaseID
+  Order.ClientInterfaceID -> ClientInterface.ClientInterfaceID
+  Order.FlatnessLoggerTypeID -> FlatnessLoggerType.FlatnessLoggerTypeID
+  Order.MillBuilderID -> MillBuilder.MillBuilderID
+  Order.MillType2ID -> MillType2.MillType2ID
+  Order.ElectricalSupplierID -> ElectricalSupplier.ElectricalSupplierID
+  RollData.BearingDiameterID -> BearingDiameter.BearingDiameterID
+  RollData.BearingHouseID -> BearingHouse.BearingHouseID
+  RollData.BearingTypeID -> BearingType.BearingTypeID
+  RollData.OrderID -> Order.OrderID
+  RollData.RollDiameterID -> RollDiameter.RollDiameterID
+  RollData.RollRepairID -> RollRepair.RollRepairID
+  RollData.RollSurfaceID -> RollSurface.RollSurfaceID
+  RollData.RollTypeID -> RollType.RollTypeID
+  RollData.SealingTypeID -> SealingType.SealingTypeID
+  RollData.ShaftMaterialID -> ShaftMaterial.ShaftMaterialID
+  RollData.SignalTransUnitID -> SignalTransUnit.SignalTransUnitID
+  RolledMaterialOrder.OrderID -> Order.OrderID
+  RolledMaterialOrder.RolledMaterialID -> RolledMaterial.RolledMaterialID
+  SWOptionsOrder.OrderID -> Order.OrderID
+  SWOptionsOrder.SWOptionsID -> SWOptions.SWOptionsID
+  SystemVersions.HMISystemID -> HMISystem.HMISystemID
+  SystemVersions.FSACoolingID -> FSACooling.FSACoolingID
+  SystemVersions.FSAProtocolID -> FSAProtocol.FSAProtocolID
+  SystemVersions.FSACommonID -> FSACommon.FSACommonID
+  SystemVersions.FSAControlID -> FSAControl.FSAControlID
+  SystemVersions.BMSReleaseID -> BMSRelease.BMSReleaseID
+  SystemVersions.FSAMeasurementID -> FSAMeasurement.FSAMeasurementID
+  SystemVersions.FSAApplicationID -> FSAApplication.FSAApplicationID
+  SystemVersions.FSABrokerID -> FSABroker.FSABrokerID
+
+Missing in SQL:
+  MSysNavPaneGroups.GroupCategoryID->MSysNavPaneGroupCategories.Id
+  Inbox_RollData.OrderID->Inbox_Order.OrderID
+  MSysNavPaneGroupToObjects.GroupID->MSysNavPaneGroups.Id
+
+================================================================================
+PRIMARY KEY COMPARISON
+================================================================================
+
+Table: RolledMaterialOrder
+  Access: None
+  SQL: None
+  Match: True
+
+Table: Settings
+  Access: None
+  SQL: None
+  Match: True
+
+Table: Inbox_Order
+  Access: None
+  SQL: OrderID
+  Match: False
+
+Table: RollData
+  Access: None
+  SQL: RollDataID
+  Match: False
+
+Table: SystemVersions
+  Access: None
+  SQL: None
+  Match: True
+
+Table: BearingHouse
+  Access: None
+  SQL: BearingHouseID
+  Match: False
+
+Table: AddContentOrder
+  Access: None
+  SQL: None
+  Match: True
+
+Table: Inbox_AirKnives
+  Access: None
+  SQL: None
+  Match: True
+
+Table: Customer
+  Access: None
+  SQL: CustomerID
+  Match: False
+
+Table: Inbox_CoolingData
+  Access: None
+  SQL: CoolingDataID
+  Match: False
+
+Table: Inbox_SystemVersions
+  Access: None
+  SQL: None
+  Match: True
+
+Table: BMSRelease
+  Access: None
+  SQL: BMSReleaseID
+  Match: False
+
+Table: TechnicalCoordinator
+  Access: None
+  SQL: TechnicalCoordinatorID
+  Match: False
+
+Table: Order
+  Access: None
+  SQL: OrderID
+  Match: False
+
+Table: SignalTransUnit
+  Access: None
+  SQL: SignalTransUnitID
+  Match: False
+
+Table: RollType
+  Access: None
+  SQL: RollTypeID
+  Match: False
+
+Table: AirKnives
+  Access: None
+  SQL: None
+  Match: True
+
+Table: ControlOrder
+  Access: None
+  SQL: None
+  Match: True
+
+Table: ElectricalSupplier
+  Access: None
+  SQL: ElectricalSupplierID
+  Match: False
+
+Table: FSAProtocol
+  Access: None
+  SQL: FSAProtocolID
+  Match: False
+
+Table: CustomerHistory
+  Access: None
+  SQL: OldCustomerID, NewCustomerID
+  Match: False
+
+Table: Control1
+  Access: None
+  SQL: Control1ID
+  Match: False
+
+Table: BearingType
+  Access: None
+  SQL: BearingTypeID
+  Match: False
+
+Table: HMISystem
+  Access: None
+  SQL: HMISystemID
+  Match: False
+
+Table: DriveSystem
+  Access: None
+  SQL: DriveSystemID
+  Match: False
+
+Table: ProjectManager
+  Access: None
+  SQL: ProjectManagerID
+  Match: False
+
+Table: AddonOrders
+  Access: None
+  SQL: OrderID, AddonOrderNo
+  Match: False
+
+Table: RollSurface
+  Access: None
+  SQL: RollSurfaceID
+  Match: False
+
+Table: FSAMeasurement
+  Access: None
+  SQL: FSAMeasurementID
+  Match: False
+
+Table: MillBuilder
+  Access: None
+  SQL: MillBuilderID
+  Match: False
+
+Table: MillType3
+  Access: None
+  SQL: MillType3ID
+  Match: False
+
+Table: BearingDiameter
+  Access: None
+  SQL: BearingDiameterID
+  Match: False
+
+Table: Inbox_AddContentOrder
+  Access: None
+  SQL: None
+  Match: True
+
+Table: Control4
+  Access: None
+  SQL: Control4ID
+  Match: False
+
+Table: Table Table
+  Access: None
+  SQL: TableId
+  Match: False
+
+Table: ClientInterface
+  Access: None
+  SQL: ClientInterfaceID
+  Match: False
+
+Table: MillType1
+  Access: None
+  SQL: MillType1ID
+  Match: False
+
+Table: SWOptions
+  Access: None
+  SQL: SWOptionsID
+  Match: False
+
+Table: RolledMaterial
+  Access: None
+  SQL: RolledMaterialID
+  Match: False
+
+Table: RollRepair
+  Access: None
+  SQL: RollRepairID
+  Match: False
+
+Table: System2
+  Access: None
+  SQL: System2ID
+  Match: False
+
+Table: SWOptionsOrder
+  Access: None
+  SQL: None
+  Match: True
+
+Table: DriveSystemOrder
+  Access: None
+  SQL: None
+  Match: True
+
+Table: SelectSource
+  Access: None
+  SQL: Alias
+  Match: False
+
+Table: FSABroker
+  Access: None
+  SQL: FSABrokerID
+  Match: False
+
+Table: System1
+  Access: None
+  SQL: System1ID
+  Match: False
+
+Table: AddContent
+  Access: None
+  SQL: AddContentID
+  Match: False
+
+Table: MechanicalData
+  Access: None
+  SQL: MechanicalDataID
+  Match: False
+
+Table: SoftwarePackage
+  Access: None
+  SQL: SoftwarePackageID
+  Match: False
+
+Table: RollDiameter
+  Access: None
+  SQL: RollDiameterID
+  Match: False
+
+Table: Inbox_DriveSystemOrder
+  Access: None
+  SQL: None
+  Match: True
+
+Table: Inbox_RolledMaterialOrder
+  Access: None
+  SQL: None
+  Match: True
+
+Table: MillType2
+  Access: None
+  SQL: MillType2ID
+  Match: False
+
+Table: RollPosition
+  Access: None
+  SQL: RollPositionID
+  Match: False
+
+Table: CoolingData
+  Access: None
+  SQL: CoolingDataID
+  Match: False
+
+Table: CommInterface
+  Access: None
+  SQL: CommInterfaceID
+  Match: False
+
+Table: Inbox_SWOptionsOrder
+  Access: None
+  SQL: None
+  Match: True
+
+Table: BasedOnAppRel
+  Access: None
+  SQL: BasedOnAppRelID
+  Match: False
+
+Table: SealingType
+  Access: None
+  SQL: SealingTypeID
+  Match: False
+
+Table: Inbox_MechanicalData
+  Access: None
+  SQL: MechanicalDataID
+  Match: False
+
+Table: FSACooling
+  Access: None
+  SQL: FSACoolingID
+  Match: False
+
+Table: Inbox_RollData
+  Access: None
+  SQL: RollDataID
+  Match: False
+
+Table: FSAControl
+  Access: None
+  SQL: FSAControlID
+  Match: False
+
+Table: Control2
+  Access: None
+  SQL: Control2ID
+  Match: False
+
+Table: Report
+  Access: None
+  SQL: ReportID
+  Match: False
+
+Table: Inbox_CommInterfaceOrder
+  Access: None
+  SQL: None
+  Match: True
+
+Table: FSAApplication
+  Access: None
+  SQL: FSAApplicationID
+  Match: False
+
+Table: ShaftMaterial
+  Access: None
+  SQL: ShaftMaterialID
+  Match: False
+
+Table: SWRelease
+  Access: None
+  SQL: SWReleaseID
+  Match: False
+
+Table: Control3
+  Access: None
+  SQL: Control3ID
+  Match: False
+
+Table: MSSComm
+  Access: None
+  SQL: MSSCommID
+  Match: False
+
+Table: DriveSystemType
+  Access: None
+  SQL: DriveSystemTypeID
+  Match: False
+
+Table: FSACommon
+  Access: None
+  SQL: FSACommonID
+  Match: False
+
+Table: FlatnessLoggerType
+  Access: None
+  SQL: FlatnessLoggerTypeID
+  Match: False
+
+Table: CoolingSystemType
+  Access: None
+  SQL: CoolingSystemTypeID
+  Match: False
+
+Table: CommInterfaceOrder
+  Access: None
+  SQL: None
+  Match: True
+
+Table: HMI
+  Access: None
+  SQL: HMIID
+  Match: False
+
+Table: Inbox_ControlOrder
+  Access: None
+  SQL: None
+  Match: True

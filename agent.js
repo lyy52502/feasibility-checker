@@ -1,0 +1,1 @@
+npm install @github/copilot-sdk
